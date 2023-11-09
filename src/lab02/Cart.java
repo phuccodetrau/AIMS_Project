@@ -16,6 +16,20 @@ public class Cart {
             System.out.println("Cart is already full!");
         }
     }
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList){
+        for(DigitalVideoDisc dvd : dvdList){
+            if(count_Order <= 20){
+                itemsOrdered[count_Order++] = dvd;
+            }else {
+                System.out.println("Cart is already full!");
+            }
+        }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2){
+        itemsOrdered[count_Order++] = dvd1;
+        itemsOrdered[count_Order++] = dvd2;
+    }
     //remove DVD to cart
     public void removeDigitalDisc(DigitalVideoDisc removedDVD) {
         // Find title by arr[index].getTitle()
